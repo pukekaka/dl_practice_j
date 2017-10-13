@@ -1,7 +1,23 @@
 package dog.poodle;
 
-/**
- * Created by pk on 2017-10-13.
- */
-public class ntm {
+import dog.poodle.control.FeedForwardController;
+
+public class ntm implements intm
+{
+
+    public FeedForwardController control;
+
+
+
+
+
+
+
+    public void process(double[] input) {
+
+    }
+
+    public double[] getOutput() {
+        return new double[0];
+    }
 }
