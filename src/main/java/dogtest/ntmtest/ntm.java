@@ -1,6 +1,6 @@
-package dog.poodle;
+package dogtest.ntmtest;
 
-import dog.poodle.control.FeedForwardController;
+import dogtest.ntmtest.control.FeedForwardController;
 
 public class ntm implements intm
 {

@@ -1,4 +1,4 @@
-package dog.poodle.control;
+package dogtest.ntmtest.control;
 
 /**
  * Created by pk on 2017-10-13.

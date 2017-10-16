@@ -1,10 +1,7 @@
-package org.dog.perceptrons;
+package dogtest.booktest.ch2.SingleLayerPerceptron.util;
 
 import java.util.Random;
 
-/**
- * Created by pk on 2017-03-30.
- */
 public class GaussianDistribution {
 
     private final double mean;
@@ -13,7 +10,7 @@ public class GaussianDistribution {
 
     public GaussianDistribution(double mean, double var, Random rng){
         if (var < 0.0){
-            throw new IllegalArgumentException("Variance must be non-negative value.");
+            throw new IllegalArgumentException("Variance must be non-negative value");
         }
 
         this.mean = mean;
@@ -27,17 +24,16 @@ public class GaussianDistribution {
 
     public double random(){
         double r = 0.0;
-        while (r == 0.0){
-            r = rng.nextDouble();
+        while(r == 0.0){
+           r = rng.nextDouble();
         }
 
         double c = Math.sqrt( -2.0 * Math.log(r));
 
-        if(rng.nextDouble() < 0.5){
-            return c * Math.sin( 2.0 * Math.PI * rng.nextDouble()) * var + mean;
+        if (rng.nextDouble() < 0.5){
+            return c * Math.sin( 2.0 * Math.PI * rng.nextDouble() ) * var + mean;
         }
 
-        return c * Math.cos( 2.0 * Math.PI * rng.nextDouble()) * var + mean;
+        return c * Math.cos( 2.0 * Math.PI * rng.nextDouble() ) * var + mean;
     }
-
 }

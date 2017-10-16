@@ -104,7 +104,7 @@ public class Perceptrons {
 
 
         //
-        // Build SingleLayerNeuralNetworks model
+        // Build SingleLayerPerceptron model
         //
 
         int epoch = 0;  // training epochs
