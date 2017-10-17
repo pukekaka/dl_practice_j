@@ -6,5 +6,6 @@ public class test {
         w = new double[2];
 
         System.out.println(w[1]);
+        System.out.println("testet");
     }
 }
