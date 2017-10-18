@@ -51,14 +51,14 @@ public class coursetest {
             }
 
             //System.out.println(total);
-
+            System.out.println(result);
             total = result + total;
 
 
             if(total>100){
-                total = 0;
-                //System.out.println(total + ", " + count +", "+hcount);
                 hcount++;
+                //System.out.println("hop_count: "+hcount+" total: " + total);
+                total = 0;
             }
 
 
