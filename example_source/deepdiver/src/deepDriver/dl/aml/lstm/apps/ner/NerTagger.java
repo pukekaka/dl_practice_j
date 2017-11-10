@@ -48,7 +48,7 @@ import deepDriver.dl.aml.lstm.apps.util.TaggedWord;
  * Prediction
  * Tag Raw String separated by blanks
  * New Instance of PosTagger: {@link #NerTagger(Properties)}
- * Property file with Model Path(.m), dictFile (.txt.gz) and tSize and fSize are necessary
+ * Property file with MANN_Model Path(.m), dictFile (.txt.gz) and tSize and fSize are necessary
  * Use below method: {@link #predict(String)}
  * 
  * @since 2016-09-09
@@ -170,7 +170,7 @@ public class NerTagger {
 	public LSTM createModel(Properties prop, int tSize, int fSize) throws Exception {
 		// String sqFile check continue training or new start
 		String sqFile = prop.getProperty("sqFile");
-		// Model Configuration Setup
+		// MANN_Model Configuration Setup
 		final LSTMConfigurator qcfg = new LSTMConfigurator();
 		// LSTM or BI-LSTM
 		boolean bi = (prop.getProperty("biDirection")==null)?false:
@@ -206,7 +206,7 @@ public class NerTagger {
 		srm.setReductionRate(0.5);
 		srm.setMinLr(0.01);
 		qcfg.setSrm(srm);
-		// Model Name
+		// MANN_Model Name
 		String name = (prop.getProperty("name")==null)?"model":prop.getProperty("name");
 		qcfg.setName(name);
 		
@@ -233,7 +233,7 @@ public class NerTagger {
 		}
 		
 		//Log
-		System.out.println("#### LSTM Model Config");
+		System.out.println("#### LSTM MANN_Model Config");
 		System.out.println("BiDirection: " + bi);
 		System.out.println("sqFile: " + sqFile);
 		System.out.println("model name: " + name);
@@ -307,7 +307,7 @@ public class NerTagger {
 		
 		// Log
 		if (verbose) {
-			System.out.println("#### Reading Model Properties");
+			System.out.println("#### Reading MANN_Model Properties");
 			System.out.println("trainFile:" + trainFile);
 			System.out.println("devFile:" + devFile);
 			System.out.println("testFile:" + testFile);
@@ -383,14 +383,14 @@ public class NerTagger {
 	public void trainModel(Properties prop) throws Exception {
 		// Load train POS stream
 		NerStream ps = loadDataset(prop, "train");
-		// Model Configuration
+		// MANN_Model Configuration
 		fSize = ps.getSampleFeatureNum();
 		tSize = ps.getTargetFeatureNum();
 		System.out.println("#### "+"Input Feature Number:" + fSize);
 		System.out.println("#### "+"Output Target Number:" + tSize);
-		nn = createModel(prop, tSize, fSize); // Creating New Model
+		nn = createModel(prop, tSize, fSize); // Creating New MANN_Model
 		nn.trainModel(ps);
-		//Save Model
+		//Save MANN_Model
 		// TO DO
 		
 	}

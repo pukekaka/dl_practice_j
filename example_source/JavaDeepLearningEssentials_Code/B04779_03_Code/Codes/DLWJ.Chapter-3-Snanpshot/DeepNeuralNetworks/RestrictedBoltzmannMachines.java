@@ -278,7 +278,7 @@ public class RestrictedBoltzmannMachines {
 
 
         //
-        // Build Restricted Boltzmann Machine Model
+        // Build Restricted Boltzmann Machine MANN_Model
         //
 
         // construct RBM

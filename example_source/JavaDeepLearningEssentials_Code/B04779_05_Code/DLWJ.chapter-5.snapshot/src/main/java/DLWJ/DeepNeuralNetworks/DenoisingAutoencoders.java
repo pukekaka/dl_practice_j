@@ -273,7 +273,7 @@ public class DenoisingAutoencoders {
 
 
         //
-        // Build Denoising Autoencoders Model
+        // Build Denoising Autoencoders MANN_Model
         //
 
         // construct DA
